@@ -8,7 +8,7 @@ This repository contains the code for a project focused on **multimodal fake new
 - **Evaluation**: Model performance is evaluated using accuracy, precision, recall, and F1-score metrics.
 
 ## **Project Structure**
-multimodal_fake_news_detection/ \
+multimodal_fake_news_detection \
 │ \
 ├── multimodal_fake_news_detection.ipynb # Jupyter notebook with the main project code\
 │ \
@@ -46,8 +46,8 @@ Since the project dependencies are relatively straightforward, there's no need t
 
 ## **Usage**
 - Clone the repository:\
-``` git clone https://github.com/SabrineAmri/multimodal_fake_news_detection.git``` \
-- Install the dependencies listed above.\
+``` git clone https://github.com/SabrineAmri/multimodal_fake_news_detection.git``` 
+- Install the dependencies listed above.
 - Run the Jupyter notebook file multimodal_fake_news_detection.ipynb using Jupyter or Google Colab.
 
 ## **Results**
