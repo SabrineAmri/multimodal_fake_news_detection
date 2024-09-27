@@ -1,37 +1,37 @@
-# **Multimodal Fake News Detection**
+# **Fake News Detection**
 
-This repository contains the code for a project focused on **multimodal fake news detection**. The goal of the project is to classify whether news articles, leveraging different modalities (such as text and image), are genuine or fake.
+This repository contains the code for a project focused on **fake news detection**. The goal of the project is to classify whether news articles are genuine or fake based on textual data.
 
 ## **Current Features**
-- **Data Preprocessing**: Handles text data preprocessing using NLP techniques and image data preprocessing.
-- **Model Training**: Implements a deep learning model using **ViLBERT** to detect fake news using both textual and visual data from a multimodal dataset.
+- **Data Preprocessing**: Handles text data preprocessing using NLP techniques (tokenization with BERT).
+- **Model Training**: Implements a deep learning model based on **BERT** to detect fake news using textual data from the dataset. The training loop includes optimizer setup, loss calculation, and backpropagation.
 - **Evaluation**: Model performance is evaluated using accuracy, precision, recall, and F1-score metrics.
 
 ## **Project Structure**
 multimodal_fake_news_detection \
 │ \
-├── multimodal_fake_news_detection.ipynb # Jupyter notebook with the main project code\
+├── fake_news_detection.ipynb # Jupyter notebook with the main project code\
 │ \
 └── README.md # Project documentation \
 │\
 └── requirements.txt # Dependencies for the project
 
 # **Model: ViLBERT**
-This project leverages ViLBERT (Vision-and-Language BERT), a state-of-the-art model designed for multimodal learning, specifically tasks involving both images and text. ViLBERT extends the BERT architecture to process and learn from both image and textual data, enabling improved performance for tasks like fake news detection where both modalities play a crucial role.
+This project uses a **BERT-based** classifier for fake news detection based on the text data of news articles. ViLBERT, a model that combines both visual and textual data, is integrated for future development to enable multimodal processing.
 
-# ViLBERT Advantages:
-- Processes both image and text data in parallel streams, allowing the model to understand complex multimodal relationships.
-- Uses transformer-based attention mechanisms to align visual and textual information, making it highly effective for multimodal tasks like this project.
+**Model Training**
+- The model uses BERT from the ```transformers``` library for feature extraction.
+- A **binary classifier** is added on top of **BERT** to classify news articles as fake or real.
+- The optimizer is set up with **Adam**, and the loss function is **Binary Cross-Entropy** with Logits (**BCEWithLogitsLoss**) for binary classification.
+- A training loop is implemented to perform **gradient descent** on the model parameters, using backpropagation to minimize the loss over multiple epochs.
 
 # **Dataset: FakeNewsNet**
-The dataset used in this project is [FakeNewsNet dataset](https://github.com/KaiDMML/FakeNewsNet.git), which is a comprehensive dataset for fake news detection containing both textual and visual information.
-
-Each entry in the dataset contains:
+The dataset used in this project is [FakeNewsNet dataset](https://github.com/KaiDMML/FakeNewsNet.git), which is a comprehensive dataset for fake news detection. The dataset currently used in the project focuses solely on textual data, including:
 
 - Text: The news article or headline.
-- Image: An image associated with the news article.
 - Label: A label indicating whether the news article is fake or real.
-FakeNewsNet is built upon two fact-checking websites, **Politifact** and **GossipCop**, and covers a wide variety of topics, allowing for a robust dataset to train multimodal models. The dataset combines both social and content-based features to improve the reliability of fake news detection.
+
+FakeNewsNet is built upon two fact-checking websites, **Politifact** and **GossipCop**, and covers a wide variety of topics, making it robust for training fake news detection models. The dataset combines both social and content-based features to improve the reliability of fake news detection.
 
 ## **Requirements**
 To run the project, you need the following dependencies:
@@ -48,7 +48,7 @@ Since the project dependencies are relatively straightforward, there's no need t
 - Clone the repository:\
 ``` git clone https://github.com/SabrineAmri/multimodal_fake_news_detection.git``` 
 - Install the dependencies listed above.
-- Run the Jupyter notebook file multimodal_fake_news_detection.ipynb using Jupyter or Google Colab.
+- Run the Jupyter notebook file fake_news_detection.ipynb using Jupyter or Google Colab.
 
 ## **Results**
 The evaluation metrics of the model demonstrate its effectiveness in detecting fake news. The performance is measured using:
@@ -66,6 +66,7 @@ The current model achieves the following performance on the test dataset:
 - **F1-Score**: 98.26%
 
 ## **Future Work**
+-**Multimodality Integration**: Currently, the project "fake_news_detection.ipynb" only handles text data. Future work will involve the integration of multimodal data (both text and image) for enhanced fake news detection.
 - **Explainability**: Plan to integrate explainable AI techniques, such as LIME or SHAP, to provide interpretability of the model's predictions.
 - **Model Improvements**: Further fine-tuning of the model and experimentation with other transformer-based architectures.
 
