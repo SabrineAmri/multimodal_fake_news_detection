@@ -66,12 +66,9 @@ The current model achieves the following performance on the test dataset:
 - **F1-Score**: 98.26%
 
 ## **Future Work**
--**Multimodality Integration**: Currently, the project "fake_news_detection.ipynb" only handles text data. Future work will involve the integration of multimodal data (both text and image) for enhanced fake news detection.
+- **Multimodality Integration**: Currently, the project "fake_news_detection.ipynb" only handles text data. Future work will involve the integration of multimodal data (both text and image) for enhanced fake news detection.
 - **Explainability**: Plan to integrate explainable AI techniques, such as LIME or SHAP, to provide interpretability of the model's predictions.
 - **Model Improvements**: Further fine-tuning of the model and experimentation with other transformer-based architectures.
 
 ## **Contributing**
 Contributions are welcome! Please feel free to submit a pull request or open an issue for discussion.
-
-
-
