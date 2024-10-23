@@ -45,7 +45,7 @@ Since the project dependencies are relatively straightforward, there's no need t
 ``` pip install torch transformers scikit-learn pandas numpy```
 
 ## **Usage**
-- Clone the repository:\
+- Clone the repository using your GitHub token:\
 ``` git clone https://github.com/SabrineAmri/multimodal_fake_news_detection.git``` 
 - Install the dependencies listed above.
 - Run the Jupyter notebook file fake_news_detection.ipynb using Jupyter or Google Colab.
