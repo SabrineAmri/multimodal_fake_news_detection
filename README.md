@@ -1,6 +1,6 @@
 # **Fake News Detection**
 
-This repository contains the code for a project focused on **fake news detection**. The goal of the project is to classify whether news articles are genuine or fake based on textual data.
+This repository contains the code for a project focused on **fake news detection**. The goal of the project is to classify whether news articles are genuine or fake based on multimodal data.
 
 ## **Current Features**
 - **Data Preprocessing**: Handles text data preprocessing using NLP techniques (tokenization with BERT).
